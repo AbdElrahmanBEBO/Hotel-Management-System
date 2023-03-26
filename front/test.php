@@ -11,8 +11,7 @@
         position: absolute;
         top: 75px;
         left: 520px;
-        box-shadow: 2px 2px 20px black;
-        t
+        box-shadow: 2px 2px 20px black;        
     }
 
     .box h1 {
@@ -21,7 +20,6 @@
         font-size: 40px;
         text-align: center;
     }
-
     .fo {
         background: none;
         outline: none;
@@ -50,6 +48,8 @@
         position: absolute;
         top: 190px;
         left: 300px;
+        text-align: center;
+        text-decoration: none;
     }
 
     .btn:hover {
@@ -93,13 +93,13 @@
             <input type="text" class="fo" placeholder="Manger Name" name="n">
             <input type="password" class="fo" placeholder="Password" name="p">
             <button type="submit" class="btn" name="SUB">Submit</button>
-            <button type="button" class="btn nd" href="front/#home">Back to home</button>
+            <a class="btn nd" href="../front/">Back to Home</a>
+
         </form>
     </body>
 </html>
 
 <?php
-    include "../backend/EmployeeService.php";
     include  "../backend/EmployeeController.php";
 
     if (isset($_POST['SUB'])) {

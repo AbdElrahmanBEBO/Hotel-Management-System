@@ -187,7 +187,7 @@
 
     ?>
     <div>
-      <a href="../../front/#home"><input type="button" class="on2" id="bth" id="nd" value="Back to home"></a>
+      <a href="../front/"><input type="button" class="on2" id="bth" id="nd" value="Back to home"></a>
     </div>
   </body>
 </html>
