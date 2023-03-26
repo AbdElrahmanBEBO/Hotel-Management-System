@@ -70,7 +70,7 @@
         <li><a href="introduction.php">Introduction</a></li>
         <li><a href="gallery.php">Gallery</a></li>
         <li><a href="contact.php">Contact</a></li>
-        <li><a href="../test.php">Manger</a></li>
+        <li><a href="test.php">Manger</a></li>
 
       </ul>
     </div><!-- Wnavbar-collapse -->

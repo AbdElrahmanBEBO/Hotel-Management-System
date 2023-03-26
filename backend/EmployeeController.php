@@ -1,6 +1,6 @@
 <?php
 
-require_once "D:/ALL LANGs/PHP/xampp/htdocs/HotelSys/services/EmployeeService.php";
+include __DIR__ . "/EmployeeService.php";
 
 class EmployeeController
 {

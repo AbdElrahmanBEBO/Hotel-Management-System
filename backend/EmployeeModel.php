@@ -1,7 +1,7 @@
 <?php
 
 
-class Employee
+class EmployeeModel
 {
     private $name;
     private $id;

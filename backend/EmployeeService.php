@@ -1,10 +1,9 @@
 <?php
 
-require_once "D:/ALL LANGs/PHP/xampp/htdocs/HotelSys/dao/EmployeeDao.php";
+include __DIR__ . "/EmployeeDao.php";
 
 class EmployeeService
 {
-
     public function getAll($table){
         $emp_dao = new EmployeeDao();
         return $emp_dao->getAll($table);

@@ -74,15 +74,14 @@
 <!-- reservation-information -->
 
 <?php
-    require_once("D:/ALL LANGs/PHP/xampp/htdocs/HotelSys/controllers/EmployeeController.php");
-    require_once("D:/ALL LANGs/PHP/xampp/htdocs/HotelSys/models/Employee.php");
-
+    include "../backend/EmployeeController.php";
+        
     if(isset($_POST['go'])){
         $client = new Employee();
         $client->setname($_POST['name']);    $client->setemail($_POST['email']);   $client->setphone($_POST['phone']);
         $client->setadult($_POST['adult']);  $client->setroom($_POST['room']);     $client->setdate($_POST['date']);
 
-        $controller = new EmployeeController();
+        $controller = new Employees();
         $controller->create($client,"client");
         echo  "<script> alert('Successful reservation!') </script>";
     }

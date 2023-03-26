@@ -1,11 +1,9 @@
 <?php
 
-require_once "D:/ALL LANGs/PHP/xampp/htdocs/HotelSys/models/Employee.php";
+include __DIR__ . "/EmployeeModel.php";
 
 class EmployeeDao
-{
-        
-   
+{   
     public function getAll($table){
         
         $db_hostname = 'localhost';$db_database = 'hotelsys';$db_username = 'root';$db_password = '';
@@ -30,7 +28,7 @@ class EmployeeDao
     
         if($table=="manger"){
             for ($j = 0; $j < $rows; ++$j) {
-                $emp = new Employee();
+                $emp = new EmployeeModel();
                 $result->data_seek($j);
                 $emp->setname($result->fetch_assoc()['name']);
                 $result->data_seek($j);
@@ -40,7 +38,7 @@ class EmployeeDao
         }
         elseif($table=="employee"){
             for ($j = 0; $j < $rows; ++$j) {
-                $emp = new Employee();
+                $emp = new EmployeeModel();
                 $result->data_seek($j);
                 $emp->setname($result->fetch_assoc()['name']);
                 $result->data_seek($j);
@@ -60,7 +58,7 @@ class EmployeeDao
         }
         elseif($table=="client"){
             for ($j = 0; $j < $rows; ++$j) {
-                $emp = new Employee();
+                $emp = new EmployeeModel();
                 $result->data_seek($j);
                 $emp->setname($result->fetch_assoc()['name']);
                 $result->data_seek($j);
@@ -82,6 +80,7 @@ class EmployeeDao
         $connection->close();
         return $arr_emp;
     }
+
     public function create($emp,$table){
         
         $db_hostname = 'localhost';$db_database = 'hotelsys';$db_username = 'root';$db_password = '';
@@ -173,14 +172,10 @@ class EmployeeDao
             $count = mysqli_num_rows($result);
             
             if($count==1){
-            header('location:dao/ADB/control.php');
+                header('location:control.php');
             }
             else echo "<h1 class='ERR'>You are not a manger<br/>you can't Access here.</h1>";     
         }
-        else echo "<h1 class='ERR'>Enter correct input please.</h1>";
-        
-
+        else echo "<h1 class='ERR'>Enter correct input please.</h1>";        
     }
-
-
 }
